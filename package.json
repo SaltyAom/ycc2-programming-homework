@@ -5,8 +5,9 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "next",
-		"build": "next build",
+		"build": "NODE_ENV=production next build",
 		"build:size": "ANALYZE=true next build",
+		"postbuild": "mv .next/static/service-worker.js public",
 		"export": "next export",
 		"start": "next start",
 		"test": "jest",
@@ -56,5 +57,6 @@
 	},
 	"resolutions": {
 		"lodash": "latest"
-	}
+	},
+	"browserslist": "> 0.25%, not dead"
 }

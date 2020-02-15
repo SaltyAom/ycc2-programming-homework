@@ -45,7 +45,7 @@ module.exports = withPlugins(
 	],
 	{
 		target: "serverless",
-		webpack(config, options) {
+		webpack(config, options) {			
 			config.optimization.minimize = true
 			config.optimization.minimizer.push(new OptimizeCSSAssetsPlugin({}))
 			config.optimization.minimizer.push(
@@ -56,22 +56,21 @@ module.exports = withPlugins(
 				})
 			)
 
-			config.resolve.alias["react"] = "preact/compat"
-			config.resolve.alias["react-dom"] = "preact/compat"
-			config.resolve.alias["react-render-to-string"] =
-				"preact-render-to-string"
-
-			config.resolve.alias["pages"] = join(__dirname, "pages")
-			config.resolve.alias["styles"] = join(__dirname, "public/styles")
-			config.resolve.alias["fonts"] = join(__dirname, "public/fonts")
-			config.resolve.alias["images"] = join(__dirname, "public/images")
-			config.resolve.alias["components"] = join(__dirname, "components")
-			config.resolve.alias["~"] = __dirname
-			config.resolve.alias["libs"] = join(__dirname, "libs")
-			config.resolve.alias["pageTypes"] = join(__dirname, "pageTypes")
-
-			config.resolve.alias["stores"] = join(__dirname, "stores")
-			config.resolve.alias["layouts"] = join(__dirname, "layouts")
+			config.resolve.alias = {
+				...config.resolve.alias,
+				"react": "preact/compat",
+				"react-dom": "preact/compat",
+				"react-render-to-string": "preact-render-to-stirng",
+				"pages": join(__dirname, "pages"),
+				"~": join(__dirname, "public"),
+				"styles": join(__dirname, "public/styles"),
+				"fonts": join(__dirname, "public/fonts"),
+				"components": join(__dirname, "components"),
+				"libs": join(__dirname, "libs"),
+				"pageTypes": join(__dirname, "pageTypes"),
+				"stores": join(__dirname, "stores"),
+				"layouts": join(__dirname, "layouts")
+			}
 
 			return config
 		}
