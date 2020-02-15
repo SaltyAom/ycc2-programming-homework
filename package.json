@@ -6,6 +6,7 @@
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
+		"build:size": "ANALYZE=true next build",
 		"export": "next export",
 		"start": "next start",
 		"test": "jest",
