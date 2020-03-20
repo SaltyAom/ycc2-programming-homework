@@ -1,0 +1,172 @@
+#product-page
+    position relative
+    display flex
+    flex-direction column
+    justify-content center
+    align-items flex-start
+    width auto
+    margin 52px + 32px auto 0 auto
+
+    @media screen and (max-width 767.9px)
+        margin-top 0
+
+    & > .navigation
+        position relative
+        display flex
+        flex-direction row
+        justify-content flex-start
+        align-items center
+        width 1050px - 100px
+        height 48px
+        margin auto
+        padding 0 8px
+        text-align left
+        background-color var(--background)
+
+        & > .back
+            position fixed
+            font-size 16px
+            color var(--link)
+            font-weight 300
+            text-decoration none
+            padding 6px 12px
+            border-radius 4px
+            outline none
+            transition background-color .2s ease-out
+
+            &:hover,
+            &:focus
+                background-color var(--link-overlay)
+
+        @media screen and (max-width 767.9px)
+            &
+                width 100%
+
+                & > .back
+                    position relative
+
+        @media screen and (min-width 768px) and (max-width 967.9px)
+            &
+                width 720px
+
+#product
+    display flex
+    flex-direction row
+    justify-content flex-start
+    align-items flex-start
+    margin 20px auto
+
+    & > .image
+        position fixed
+        z-index -1
+        width 445px
+        margin 0
+        object-fit cover
+        object-position center
+
+    @media screen and (max-width 767.9px)
+        &
+            flex-direction column
+
+            & > .image
+                position relative
+                width 80%
+                margin 0 10%
+                background-color var(--background)
+
+    @media screen and (min-width 768px) and (max-width 967.9px)
+        & > .image
+            width 320px
+
+#product-detail
+    display flex
+    flex-direction column
+    justify-content flex-start
+    align-items flex-start
+    width 575px
+    margin 0 0 0 445px + 60px
+
+    & > .header
+        display flex
+        flex-direction column
+        justify-content flex-start
+        align-items flex-start
+        width 100%
+        margin 0 0 16px 0
+
+        & > .title
+            font-size 42px
+            font-weight 600
+            color var(--title)
+            margin 12px 0
+            line-height 1.5em
+
+        & > .overview
+            font-size 18px
+            font-weight 400
+            color var(--content)
+            margin 8px 0
+            line-height 1.5em
+
+    & > .sub-title
+        font-size 28px
+        font-weight 500
+        color var(--title)
+        margin 24px 0 8px 0
+
+    & > .option
+        width 100%
+        padding 24px 20px
+        font-size 24px
+        margin 8px 0
+        border-radius 8px
+        border 2px solid var(--border)
+        transition background-color .2s, border-color .2s, box-shadow .2s
+        outline none
+        cursor pointer
+
+        &:hover,
+        &:focus,
+        &.-selected
+            background-color var(--primary-overlay)
+            border-color var(--primary)
+        
+        &.-selected
+            box-shadow 0 0 0 6px var(--primary-overlay)
+
+    & > .price
+        font-size 36px
+        color var(--title)
+        font-weight 400
+        margin 8px 0
+
+    & > .purchase
+        appearance none
+        font-size 18px
+        font-weight 400
+        color var(--text-on-primary)
+        margin 16px 0
+        padding 8px 16px
+        background-color var(--primary)
+        border 0
+        border-radius 4px
+        outline none
+        cursor pointer        
+
+    @media screen and (max-width 767.9px)
+        &
+            width 100%
+            margin-top 20px
+            margin-left 0
+            padding 0 5%
+
+            & > .purchase
+                width 100%
+                font-size 21px
+                font-weight 600
+                padding 12px
+
+    @media screen and (min-width 768px) and (max-width 967.9px)
+        &
+            width 400px
+            margin-left 340px

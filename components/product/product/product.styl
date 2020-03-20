@@ -1,0 +1,78 @@
+.product-link
+    text-decoration none
+
+.product
+    display flex
+    flex-direction column
+    justify-content flex-start
+    align-items center
+    width 100%
+    height calc(100vh - 52px)
+    max-height 840px
+    padding 48px 0 36px
+    background-color var(--root)
+    overflow hidden
+
+    &.-top
+        margin-top 52px
+
+        @media screen and (max-width 768px)
+            margin 0
+
+    &.-background
+        background-size cover
+        background-position center
+        background-repeat no-repeat
+
+    & > .new
+        color var(--warn)
+        font-size 16px
+        font-weight 200
+        margin 0
+
+    & > .title
+        color var(--title)
+        font-size 60px
+        font-weight 600
+        margin 16px 0 4px 0
+
+    & > .detail
+        color var(--content)
+        font-size 24px
+        font-weight 300
+        margin 0
+
+    & > .more
+        font-size 16px
+        color var(--link)
+        font-weight 300
+        text-decoration none
+        margin 36px 0 0 0
+
+    & > .figure
+        display flex
+        flex 1
+        flex-direction column
+        justify-content center
+        align-items center
+        width 100%
+        height calc(100% - 100px)
+        margin 0
+
+        & > .image
+            max-width 90%
+            max-height 90%
+            object-fit contain
+            object-position center
+
+    @media screen and (max-width 767.9px)
+        & > .title
+            font-size 48px
+
+        & > .detail
+            font-size 18px
+
+        & > .figure
+            & > .image
+                max-width 100%
+                max-height 100%

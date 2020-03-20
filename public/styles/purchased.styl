@@ -1,0 +1,37 @@
+#purchased
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    width 100%
+    height 100vh
+    padding-top 52px
+    text-align center
+    padding 0 8px
+
+    & > .title
+        font-size 36px
+        color var(--title)
+        font-weight 400
+        margin 0 0 16px 0
+
+    & > .detail
+        font-size 18px
+        color var(--content)
+        font-weight 300
+        margin 0
+
+    & > .link
+        font-size 21px
+        color var(--link)
+        font-weight 400
+        text-decoration none
+        margin 60px 0 0 0
+
+    @media screen and (max-width 767.9px)
+        & > .title
+            font-size 28px
+
+        & > .detail,
+        & > .link
+            font-size 16px

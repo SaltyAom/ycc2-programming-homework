@@ -1,7 +1,23 @@
-import { NextPage } from "next"
+import { Fragment } from 'react'
 
-import ILanding from "pageTypes/index"
+import Head from 'next/head'
 
-const Landing: NextPage<ILanding> = () => <h1>Hello World</h1>
+import { Product, ProductList } from 'components/product'
+
+import { mainProduct, products } from 'libs/product'
+
+import 'styles/landing.styl'
+
+const Landing = () => (
+    <Fragment>
+        <Head>
+            <title>Product List</title>
+        </Head>
+        <main id="landing">
+            <Product {...mainProduct} />
+            <ProductList productList={products} />
+        </main>
+    </Fragment>
+)
 
 export default Landing
