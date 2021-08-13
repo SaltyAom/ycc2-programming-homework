@@ -16,7 +16,7 @@
 		"test:all": "jest && tsc && tslint 'src/**/*.{ts,tsx}'"
 	},
 	"dependencies": {
-		"next": "^9.3.1",
+		"next": "^11.1.0",
 		"preact": "^10.3.4",
 		"preact-render-to-string": "5.1.4",
 		"stylus": "^0.54.7"
